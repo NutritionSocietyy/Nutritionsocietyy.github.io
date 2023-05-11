@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=NiveauSerifLightSmall&display=swap');
+@import url('https://fonts.googleapis.com/css?family=MuseoCyrillic100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Museo700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  /* фоновый цвет */
+  background: #e0e0e0;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+
+body {
+    font-family: Quicksand;
+    font-size: 25px;
+    background-image: url(../images/nwg.png); /*фоновый рисунок*/
+	/* background-attachment: fixed; Фон страницы фиксируется */
+    background-repeat: repeat-x;
+}
+
+h1 {
+    margin-top: 120px;
+    color: white;
+    font-family: NiveauSerifLightSmall;
+    font-size: 60px;
+}
+
+span {
+    color: #FFFFFF;
+    text-shadow: 
+    -0   -1px 0   #000000,
+     0   -1px 0   #000000,
+    -0    1px 0   #000000,
+     0    1px 0   #000000,
+    -1px -0   0   #000000,
+     1px -0   0   #000000,
+    -1px  0   0   #000000,
+     1px  0   0   #000000,
+    -1px -1px 0   #000000,
+     1px -1px 0   #000000,
+    -1px  1px 0   #000000,
+     1px  1px 0   #000000,
+    -1px -1px 0   #000000,
+     1px -1px 0   #000000,
+    -1px  1px 0   #000000,
+     1px  1px 0   #000000;
+}
+
+.box {
+    display: inline-block;
+    /* margin-left: 300px; */
+    margin-top: -70px;
+}
+
+.btn {
+    color: white;
+}
+
+.carousel-item img {
+    max-width: 500px;
+}
+
+
+/*--------------------------------------------------------------
+#Карточка товаров
+--------------------------------------------------------------*/
+.card {
+    margin-right: auto;
+    margin-left: auto;
+    width: 160px;
+    box-shadow: 0 15px 25px #FF4040;
+    height: 0px;
+    border-radius: 5px;
+    border-style: none;
+    backdrop-filter: blur(10px);
+    background-color: #FF4040;
+    padding: 0;
+    margin-inline: 40px;
+    text-align: center;
+}
+
+h5 {
+    font-family: Museo700;
+    font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+# Nav panel
+--------------------------------------------------------------*/
+.navpanel {
+    display: flex;
+    justify-content: center;
+}
+.nav-link:hover {
+    color: red;
+}
+
+.nav-link,
+.nav-link active {
+    color: white;
+}
+
+.nav-link:focus {
+    color: red
+}
+
+/*--------------------------------------------------------------
+#Footer
+--------------------------------------------------------------*/
+footer {
+    background-color: #242424;
+    
+}
+
+.col-lg-6>h2 {
+    color: white;
+
+}
+
+/*--------------------------------------------------------------
+#LatestNews
+--------------------------------------------------------------*/
+
+.info {
+    display: flex;
+}
+
+.info-text>p {
+    color: rgba(255, 255, 255, 0.388);
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.info-text>p>a {
+   text-decoration: none;
+   color: white;
+}
+
+.info>img {
+    margin: 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+hr {
+    color: white;
+    width: 50%;
+    margin-left: 210px;
+}
+
+/*--------------------------------------------------------------
+#Our Guides
+--------------------------------------------------------------*/
+.gui>ul {
+    color: white;
+    list-style: circle;
+    margin: 20px;
+}
+
+.gui>ul>li {
+    font-size: 20px;
+}
+
+.gui>h2 {
+    color: white;
+    margin-left: 30px;  
+}
+
+.gui>img {
+    width: 450px;
+}
+
+/*--------------------------------------------------------------
+#Where to buy
+--------------------------------------------------------------*/
+
+.map {
+    display: flex;
+}
+
+.text-but p {
+    color: rgba(255, 255, 255, 0.388);
+    font-size: 15px;
+    margin-bottom: 0%;
+}
+
+.map-icon img {
+    margin-left: 20px;
+    opacity: .1;
+}
+
+/*--------------------------------------------------------------
+#Иконки и реклама
+--------------------------------------------------------------*/
+
+
+.contact h2 {
+    color: white;
+    margin-left: 30px;
+}
+
+.contact p {
+    display: inline;
+    margin-left: 30px;
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.388);
+    font-size: 15px;
+}
+
+.btn-facebook {
+    background: url(../icons/facebook.png) center center no-repeat;
+    background-color: white;
+    background-size: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.btn-twitter {
+    background: url(../icons/twitter.png) center center no-repeat;
+    background-color: white;
+    background-size: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-google {
+    background: url(../icons/google.png) center center no-repeat;
+    background-color: white;
+    background-size: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* При наведении меняют цвет фона */
+.btn-facebook:hover,
+.btn-twitter:hover,
+.btn-google:hover {
+    background-color:#242424
+}
+
+
+.btn-email {
+    border: 1px solid transparent;
+    background-color: #242424;
+    border-radius: 20px;
+    border-color: white;
+    margin-left: 30px;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.btn-email:hover {
+    background-color: black
+}
+
+.fa-plus {
+    margin-left: 50px;
+}
+
+.foot span {
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.694);
+}
+
+@media (min-width: 1280px) {
+    .navpanel {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*--------------------------------------------------------------
+#Для планшетов
+--------------------------------------------------------------*/
+@media (max-width: 800px) {
+    .navpanel {
+        display: block;
+    }
+    
+    .navbar {
+        top: 0;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #FF4040;
+  }
+
+    .navbar-toggler {
+        background-color: white;
+    }
+
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    .gui h2,
+    .gui ul,
+    .contact h2,
+    .contact p {
+        margin-left: 0;
+    }
+
+    .btn-email {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+}
+
+/*--------------------------------------------------------------
+#Для мобильных
+--------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    .navpanel {
+        display: block;
+    }
+    
+    .navbar {
+        top: 0;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #FF4040;
+  }
+
+    .navbar-toggler {
+        background-color: white;
+    }
+
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    .gui h2,
+    .gui ul,
+    .contact h2,
+    .contact p {
+        margin-left: 0;
+    }
+
+    .btn-email {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+   
+
+    .foot span {
+        font-size: 10px;
+    }
+}
